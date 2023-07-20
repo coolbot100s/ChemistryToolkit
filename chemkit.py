@@ -76,7 +76,7 @@ def prompt(prompt = ""):
     return input(prompt + " (y/n)").lower().strip() == "y"
 
 ## Convert number to subscript
-def subscript(number): #BUG: could fail if user submits subscript text
+def subscript(number): 
     subscript_digits = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
     return str(number).translate(subscript_digits)
 
