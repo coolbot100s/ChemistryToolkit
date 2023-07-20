@@ -17,6 +17,46 @@ output_path = current_directory + "\output"
 kubejs_path = output_path + "\kubejs"
 data_path = current_directory + "\data"
 
+def gen_default_config():
+    if os.path.exists(current_directory + "\config.yaml") == False:
+        default_config = {'''# The location generated files should be saved to
+# Default = <current directory>/output
+output_path: ""
+# The location the kubejs scripts should be saved to, make this <your instance path>/.minecraft/kubejs. 
+# Default = output/kubejs
+kubejs_path: ""
+# The location to look for compounds.json and elements.json
+# Default = <current directory>/data
+data_path: ""
+# The namespace your generated items will belong to
+# Default = "chemkit"
+namespace: "chemkit"
+# If true wipe the output folder on startup
+# Default = False
+replace_scripts: False
+# If true all items generated will not be given chemlib models, you can set your own texture in kubejs/assets #TODO
+# Default = False
+custom_sprites: False 
+# if true, gasses or fluids will will have bucket items and be placeable (UNIMPLIMENTED) #TODO
+# Default = False
+allow_gasses: False
+alow_fluids: False
+# If true, new compounds will not be added to /data/compounds.json #TODO
+# Default = False
+forget_new_compounds: False
+# checked when a compound's formula cannot be determined because of an unrecognized ingredient.
+# when True you will be asked to abbreviate that ingredient.
+# when False, you will be asked to write the whole formula yourself.
+# Default = False
+abb_per_ingredient: False
+# If true, any non-chemlib entries in the data table will be deleted
+# Default = False
+auto_reset_data: False
+'''}
+        with open(current_directory + "\config.yaml", "w") as file:
+            file.writelines(default_config)
+gen_default_config()
+
 def load_settings():
     with open(current_directory + "\config.yaml", "r") as file:
         data = yaml.safe_load(file)
