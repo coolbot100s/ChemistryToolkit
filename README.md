@@ -23,3 +23,17 @@ When using input.json, create any compounds you wish to be used in other compoun
 
 ### datatool
 This is a simple dev tool I used to convert the tables inside the chemlib datapack to supply info on the elements and compounds it provides, not intended for use and prone to breaking.
+
+## Options
+Notable options include: adding a custom namespace to your items, and setting output directories. Others are largely for development and testing.
+
+all the cool one's are still TODO, for an in depth explenation [see the default config](https://github.com/coolbot100s/ChemistryToolkit/blob/main/config.yaml)
+
+## Disclaimer
+I don't know what I'm doing. 
+
+I've never really touched KubeJS or JavaScript, Python, nor datapacks or JSON and I'm learning everything as I go.
+
+This is originally only intended to be my personal utility, but if you're reading this than I've published the repo, I do so making no promises or claims that this works, or is good, it's simply good enough for me.
+
+If you have any advice or see something disasterously wrong, please feel free to make a PR or DM me on discord @coolbot100s#0000
