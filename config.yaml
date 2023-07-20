@@ -12,10 +12,10 @@ data_path: ""
 namespace: "chemkit"
 # If true wipe the output folder on startup
 # Default = False
-replace_scripts: True
-# If true all items generated will not be given chemlib models, you can set your own texture in kubejs/assets
+replace_scripts: False
+# If true all items generated will not be given chemlib models, you can set your own texture in kubejs/assets #TODO
 # Default = False
-custom_sprites: False #TODO
+custom_sprites: False 
 # if true, gasses or fluids will will have bucket items and be placeable (UNIMPLIMENTED) #TODO
 # Default = False
 allow_gasses: False
@@ -30,4 +30,4 @@ forget_new_compounds: False
 abb_per_ingredient: False
 # If true, any non-chemlib entries in the data table will be deleted
 # Default = False
-auto_reset_data: True
+auto_reset_data: False
