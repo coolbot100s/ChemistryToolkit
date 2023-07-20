@@ -1,0 +1,21 @@
+{
+  "default": [
+    {
+      "color": "random",
+      "items": "solid = true, liquid/gas = false",
+      "formula": "generated"
+    }
+  ],
+  "new_compounds": [
+    {
+      "name": "Barrelene",
+      "color": "6c5030",
+      "matter": "solid",
+      "items": "",
+      "ingredients": ["chemlib:carbon", "chemlib:hydrogen"],
+      "ingredient_counts": [8, 8],
+      "description": "",
+      "formula": ""
+    }
+  ]
+}

@@ -1,0 +1,3146 @@
+{
+    "compounds": [
+        {
+            "id": "chemlib:carbon_dioxide",
+            "name": "carbon_dioxide",
+            "abbreviation": "CO2",
+            "color": "32c832",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "An acidic, trace gas found in the atmosphere, and a common bi-product of combustion, and a major greenhouse gas. Also useful as a refrigerant and supercritical solvent."
+        },
+        {
+            "id": "chemlib:ethylene",
+            "name": "ethylene",
+            "abbreviation": "C2H4",
+            "color": "c6c79f",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                2,
+                4
+            ],
+            "description": "This chemical is widely used in industrial chemistry, particularly in the synthesis of polyethylene plastics."
+        },
+        {
+            "id": "chemlib:cellulose",
+            "name": "cellulose",
+            "abbreviation": "C6H10O5",
+            "color": "bdab8e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                6,
+                10,
+                5
+            ],
+            "description": "An important structural component of green plants, cellulose is the most abundant organic polymer on Earth. It is used to make paper, and can be chemically treated to make cellophane plastics."
+        },
+        {
+            "id": "chemlib:chitin",
+            "name": "chitin",
+            "abbreviation": "C8H13O5N",
+            "color": "30160d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen",
+                "chemlib:nitrogen"
+            ],
+            "ingredient_counts": [
+                8,
+                13,
+                5,
+                1
+            ],
+            "description": "An organic polymer, the primary component of the cells of fungi, and the exoskeletons of arthropods. Structurally similar to cellulose, but functionally a protein."
+        },
+        {
+            "id": "chemlib:keratin",
+            "name": "keratin",
+            "abbreviation": "((NH3)(CO2)(C2H4)S)2(C12H20O10)2(SO2)5",
+            "color": "30160d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:protein",
+                "chemlib:starch",
+                "chemlib:sulfur_dioxide"
+            ],
+            "ingredient_counts": [
+                2,
+                2,
+                5
+            ],
+            "description": "A fibrous protein, this compound makes up hair, nails, feathers, horns, scales, claws, hooves, and skin."
+        },
+        {
+            "id": "chemlib:silicon_dioxide",
+            "name": "silicon_dioxide",
+            "abbreviation": "SiO2",
+            "color": "807461",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:silicon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Also known as silica, this abundant mineral is a major constituent of sand, and is a key component in almost every mineral. Crystalline forms include clear quartz and opal."
+        },
+        {
+            "id": "chemlib:nitrate",
+            "name": "nitrate",
+            "abbreviation": "NO3",
+            "color": "5fb5c6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "A polyatomic anion, salts formed from nitrate are called 'nitrates'. Nitrates are largely water-soluble, and are common components in fertilizers and explosives."
+        },
+        {
+            "id": "chemlib:potassium_nitrate",
+            "name": "potassium_nitrate",
+            "abbreviation": "K(NO3)",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Also known as niter or saltpeter, this chemical is commonly used to synthesize fertilizers and gunpowder. It can also be used as a salt to cure meats."
+        },
+        {
+            "id": "chemlib:aluminum_oxide",
+            "name": "aluminum_oxide",
+            "abbreviation": "Al2O3",
+            "color": "a0a2de",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:aluminum",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "Also known as corundum, this mineral is a key component in many precious stones. Metallic impurites in corundum can create vibrant colors, becoming ruby or sapphire."
+        },
+        {
+            "id": "chemlib:magnesium_oxide",
+            "name": "magnesium_oxide",
+            "abbreviation": "MgO",
+            "color": "edb2ad",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Also known as periclase, this mineral is highly resistant to heat and pressure. It's a common component in contact metamorphic rocks."
+        },
+        {
+            "id": "chemlib:potassium_chloride",
+            "name": "potassium_chloride",
+            "abbreviation": "KCl",
+            "color": "a33007",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "A metal halide salt, potassium chloride is also known as sylvite, and can be used as an food additive as a low-sodium salt substitute."
+        },
+        {
+            "id": "chemlib:sodium_chloride",
+            "name": "sodium_chloride",
+            "abbreviation": "NaCl",
+            "color": "c7c1a1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Common table salt, sodium chloride is the salt most responsible for the salinity of seawater. It has numerous uses in manufacturing and electrolysis."
+        },
+        {
+            "id": "chemlib:water",
+            "name": "water",
+            "abbreviation": "H2O",
+            "color": "115ec0",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "Also known as dihydrogen monoxide, and a vital component for all organic life. Not only is it vital for life and farming, but most long-distance trade goods are transported over water."
+        },
+        {
+            "id": "chemlib:kaolinite",
+            "name": "kaolinite",
+            "abbreviation": "(Al2O3)(SiO2)2(H2O)2",
+            "color": "a49fda",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:aluminum_oxide",
+                "chemlib:silicon_dioxide",
+                "chemlib:water"
+            ],
+            "ingredient_counts": [
+                1,
+                2,
+                2
+            ],
+            "description": "Rocks made from kaolinite are known as kaolin clay. It's a popular material for use in ceramics. It's also sometimes eaten as a snack, or as a health food, though it has little to no dietary benefit."
+        },
+        {
+            "id": "chemlib:protein",
+            "name": "protein",
+            "abbreviation": "(NH3)(CO2)(C2H4)S",
+            "color": "906c15",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:ammonia",
+                "chemlib:carbon_dioxide",
+                "chemlib:ethylene",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "description": "Proteins are large, complicated molecules made from chains of amino acids, that make up all living things. This protein is one of the most simple, known as cysteine."
+        },
+        {
+            "id": "chemlib:iron_oxide",
+            "name": "iron_oxide",
+            "abbreviation": "Fe2O3",
+            "color": "782020",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "Also known as hematite, iron(III) oxide is a common ore used in the making of steel. It can also be used as a polishing abrasive, or as a pigment."
+        },
+        {
+            "id": "chemlib:sucrose",
+            "name": "sucrose",
+            "abbreviation": "C12H22O11",
+            "color": "e0d5d2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                12,
+                22,
+                11
+            ],
+            "description": "Simple white sugar or table sugar, sucrose is usually extracted from sugar cane or sugar beets. It's a common food additive, but can be particularly bad for your teeth."
+        },
+        {
+            "id": "chemlib:carbonate",
+            "name": "carbonate",
+            "abbreviation": "CO3",
+            "color": "61715a",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "An anion of carbonic acid can be combined with metals to form carbonate salts of many varieties. It's the simplest oxocarbon anion."
+        },
+        {
+            "id": "chemlib:calcium_carbonate",
+            "name": "calcium_carbonate",
+            "abbreviation": "Ca(CO3)",
+            "color": "97a15c",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "A major component in limestone, this compound is also found in shellfish, pearls, and eggshells. It's also often sold as antacid tablets."
+        },
+        {
+            "id": "chemlib:phosphate",
+            "name": "phosphate",
+            "abbreviation": "PO4",
+            "color": "cf9953",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:phosphorus",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                4
+            ],
+            "description": "An anion of phosphoric acid, phosphates play a key role in biochemistry - they add hardness to bones and teeth, and are vital to the growth of some plants."
+        },
+        {
+            "id": "chemlib:hydroxide",
+            "name": "hydroxide",
+            "abbreviation": "OH",
+            "color": "ffae00",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:oxygen",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "A diatomic anion, hydroxide occurs as a natural constituent of water"
+        },
+        {
+            "id": "chemlib:hydroxylapatite",
+            "name": "hydroxylapatite",
+            "abbreviation": "Ca5(PO4)6(OH)2",
+            "color": "b2d9b2",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:phosphate",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                5,
+                6,
+                2
+            ],
+            "description": "Hydroxylapatite is the primary mineral in human bones. It can also be found in calcified organs, sometimes called \"Brain sand\"."
+        },
+        {
+            "id": "chemlib:strontium_carbonate",
+            "name": "strontium_carbonate",
+            "abbreviation": "Sr(CO3)",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "The mineral Strontianite, when combined with other metals, helps with conductivity, and is electroluminescent."
+        },
+        {
+            "id": "chemlib:beryl",
+            "name": "beryl",
+            "abbreviation": "Be3Al2Si6O18",
+            "color": "b1d6bf",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:aluminum",
+                "chemlib:silicon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                3,
+                2,
+                6,
+                18
+            ],
+            "description": "A hexagonal, crystalline mineral, beryl can form many kinds of precious stones, such as emerald and aquamarine."
+        },
+        {
+            "id": "chemlib:starch",
+            "name": "starch",
+            "abbreviation": "C12H20O10",
+            "color": "fcefa6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                12,
+                20,
+                10
+            ],
+            "description": "Starch is the most common carbohydrate in the human diet. It is also used to make bioplastics."
+        },
+        {
+            "id": "chemlib:cucurbitacin",
+            "name": "cucurbitacin",
+            "abbreviation": "C32H44O8",
+            "color": "ffc800",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                32,
+                44,
+                8
+            ],
+            "description": "A natural bitterant found in squash plants. Eating too much can cause poisoning, called \"Toxic Squash Syndrome\""
+        },
+        {
+            "id": "chemlib:zinc_oxide",
+            "name": "zinc_oxide",
+            "abbreviation": "ZnO",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "A wide-band gap semiconductor, this mineral is useful for making transparent electronics."
+        },
+        {
+            "id": "chemlib:cobalt_aluminate",
+            "name": "cobalt_aluminate",
+            "abbreviation": "CoAl2O4",
+            "color": "1172c6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cobalt",
+                "chemlib:aluminum",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2,
+                4
+            ],
+            "description": "Also called Cobalt Blue, this compound is commonly used in dying ceramics and glass."
+        },
+        {
+            "id": "chemlib:triglyceride",
+            "name": "triglyceride",
+            "abbreviation": "C18H32O2",
+            "color": "c8c85a",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                18,
+                32,
+                2
+            ],
+            "description": "An esther of three fatty acids, triglycerides are the main component of animal fats and plant oils."
+        },
+        {
+            "id": "chemlib:lead_iodide",
+            "name": "lead_iodide",
+            "abbreviation": "PbI2",
+            "color": "d6c633",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:iodine"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "A tradition lead pigment, rarely used in modern times due to toxicity."
+        },
+        {
+            "id": "chemlib:ethanol",
+            "name": "ethanol",
+            "abbreviation": "C2H5(OH)",
+            "color": "d2fa96",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                2,
+                5,
+                1
+            ],
+            "description": "Ethyl alcohol or grain alcohol, this liquid can be made via fermentation, and is flammable at high concentration."
+        },
+        {
+            "id": "chemlib:propan-1-ol",
+            "name": "propan-1-ol",
+            "abbreviation": "C3H7(OH)",
+            "color": "ffa500",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                3,
+                7,
+                1
+            ],
+            "description": "Propan-1-ol, also known as n-propanol or 1-propanol, is a colorless liquid with a strong odor. It is used as a solvent and in the production of various chemicals."
+        },
+        {
+            "id": "chemlib:propan-2-ol",
+            "name": "propan-2-ol",
+            "abbreviation": "C3H7(OH)",
+            "color": "808080",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                3,
+                7,
+                1
+            ],
+            "description": "Propan-2-ol, also known as isopropyl alcohol or isopropanol, is a colorless liquid with a strong odor. It is used as a solvent, cleaning agent, and in many household products."
+        },
+        {
+            "id": "chemlib:amide",
+            "name": "amide",
+            "abbreviation": "NH2",
+            "color": "d2fafa",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Amide groups are common in organic compounds, found in proteins, plastics, and medication."
+        },
+        {
+            "id": "chemlib:urea",
+            "name": "urea",
+            "abbreviation": "CO(NH2)2",
+            "color": "e6f0b4",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:oxygen",
+                "chemlib:amide"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                2
+            ],
+            "description": "Also known as carbamide, urea is a common product of nitrogen metabolism."
+        },
+        {
+            "id": "chemlib:ammonium",
+            "name": "ammonium",
+            "abbreviation": "NH4",
+            "color": "b4fafa",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                4
+            ],
+            "description": "An acidic, gaseous form of ammonia, salts of ammonium are useful in promoting plant growth."
+        },
+        {
+            "id": "chemlib:diammonium_phosphate",
+            "name": "diammonium_phosphate",
+            "abbreviation": "(NH4)2H(PO4)",
+            "color": "d2fa96",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:ammonium",
+                "chemlib:hydrogen",
+                "chemlib:phosphate"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                1
+            ],
+            "description": "DAP for short, this chemical is a common plant food, and can be used as a fire retardant."
+        },
+        {
+            "id": "chemlib:potassium_carbonate",
+            "name": "potassium_carbonate",
+            "abbreviation": "K2(CO3)",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "A primary component of potash, this salt is often used in the production of glass, soap, and as a leavening agent."
+        },
+        {
+            "id": "chemlib:mullite",
+            "name": "mullite",
+            "abbreviation": "(Al2O3)2(SiO2)",
+            "color": "6e6e96",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:aluminum_oxide",
+                "chemlib:silicon_dioxide"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "With a high melting point and strong crystal structure, mullite makes strong porcelain."
+        },
+        {
+            "id": "chemlib:methane",
+            "name": "methane",
+            "abbreviation": "CH4",
+            "color": "c81eb4",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                4
+            ],
+            "description": "The primary component of natural gas, methane can be found naturally in swamp gasses."
+        },
+        {
+            "id": "chemlib:ethane",
+            "name": "ethane",
+            "abbreviation": "C2H6",
+            "color": "c81e32",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                2,
+                6
+            ],
+            "description": "After methane, the second-largest component of natural gas."
+        },
+        {
+            "id": "chemlib:propane",
+            "name": "propane",
+            "abbreviation": "C3H8",
+            "color": "641e32",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                3,
+                8
+            ],
+            "description": "While a gas at standard pressure, propane can be compressed into a liquid, making for easy transportation."
+        },
+        {
+            "id": "chemlib:butane",
+            "name": "butane",
+            "abbreviation": "C4H10",
+            "color": "6f96b4",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                4,
+                10
+            ],
+            "description": "Butane and propane were discovered simultaneously, as gasses found dissolved in crude petroluem."
+        },
+        {
+            "id": "chemlib:pentane",
+            "name": "pentane",
+            "abbreviation": "C5H12",
+            "color": "6f9655",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                5,
+                12
+            ],
+            "description": "A popular solvent, pentane's low boiling point also make it ideal for geothermal energy production."
+        },
+        {
+            "id": "chemlib:hexane",
+            "name": "hexane",
+            "abbreviation": "C6H14",
+            "color": "6fcd32",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                6,
+                14
+            ],
+            "description": "A non-polar solvent, hexanes are commonly used in the production of leather and glue."
+        },
+        {
+            "id": "chemlib:heptane",
+            "name": "heptane",
+            "abbreviation": "C7H16",
+            "color": "d9d900",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                7,
+                16
+            ],
+            "description": "Heptane is a straight-chain alkane with seven carbon atoms. It is commonly used as a non-polar solvent and is highly flammable."
+        },
+        {
+            "id": "chemlib:graphite",
+            "name": "graphite",
+            "abbreviation": "C4",
+            "color": "1f1f1f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon"
+            ],
+            "ingredient_counts": [
+                4
+            ],
+            "description": "A crystalline form of carbon. It is used in pencils, lubricants, and under pressure it can form diamonds."
+        },
+        {
+            "id": "chemlib:calcium_sulfide",
+            "name": "calcium_sulfide",
+            "abbreviation": "Ca1S1",
+            "color": "1f1f1f",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Known as the mineral oldhamite, it is a rare mineral found in meteorites - though, it can be easily synthesized, often as a side-product of burning coal."
+        },
+        {
+            "id": "chemlib:potassium_dichromate",
+            "name": "potassium_dichromate",
+            "abbreviation": "K2Cr2O7",
+            "color": "e88746",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:chromium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                2,
+                7
+            ],
+            "description": "While this chemical can be used as a richly-colored wood stain, chromium is a common allergen, causing skin irritation."
+        },
+        {
+            "id": "chemlib:nickel_chloride",
+            "name": "nickel_chloride",
+            "abbreviation": "NiCl2",
+            "color": "5da773",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical can turn a wide variety of colors when the salt forms complexes with other substances, but green is the most common."
+        },
+        {
+            "id": "chemlib:potassium_permanganate",
+            "name": "potassium_permanganate",
+            "abbreviation": "KMnO4",
+            "color": "935fb5",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:manganese",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "Traditionally used as a disinfectant, this chemical can be used on both wounds and to purify water, though it tends to turn the water pink."
+        },
+        {
+            "id": "chemlib:magnesium_sulfate",
+            "name": "magnesium_sulfate",
+            "abbreviation": "MgSO4",
+            "color": "af9fad",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "Also know as epsom salt or bath salt, it's one of the primary salts in seawater, and the main reason sound doesn't travel well through the ocean."
+        },
+        {
+            "id": "chemlib:copper_chloride",
+            "name": "copper_chloride",
+            "abbreviation": "CuCl2",
+            "color": "5bb37c",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Forming the rare mineral tolbachite, this chemical can be used in pyrotechnics to give the flame a blue-green color."
+        },
+        {
+            "id": "chemlib:cadmium_sulfide",
+            "name": "cadmium_sulfide",
+            "abbreviation": "CdS",
+            "color": "c6c23b",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cadmium",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "In addition to its use as a pigment, this chemical can be used in thin films to make solar cells."
+        },
+        {
+            "id": "chemlib:chromium_oxide",
+            "name": "chromium_oxide",
+            "abbreviation": "Cr2O3",
+            "color": "83ab61",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:chromium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "Called eskolaite or viridian, this pigment's fine powder is also useful for polishing the edges of knives."
+        },
+        {
+            "id": "chemlib:antimony_trioxide",
+            "name": "antimony_trioxide",
+            "abbreviation": "Sb2O3",
+            "color": "faffc8",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:antimony",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "This mineral is commonly used not only as a pigment, but as flame retardant in many materials, such textiles and electronics."
+        },
+        {
+            "id": "chemlib:titanium_oxide",
+            "name": "titanium_oxide",
+            "abbreviation": "Ti2O3",
+            "color": "321e32",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:titanium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "A black semiconductor, this mineral can be found extremely rarely in nature as tistarite."
+        },
+        {
+            "id": "chemlib:han_purple",
+            "name": "han_purple",
+            "abbreviation": "BaCuSi2O6",
+            "color": "dc64ff",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:copper",
+                "chemlib:silicon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                2,
+                6
+            ],
+            "description": "A tradition Chinese pigment, it's possible the recipe for making this compound came from improvements to the earlier Egyptian Blue."
+        },
+        {
+            "id": "chemlib:arsenic_sulfide",
+            "name": "arsenic_sulfide",
+            "abbreviation": "As4S4",
+            "color": "fa6482",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:arsenic",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                4,
+                4
+            ],
+            "description": "Called \"ruby of arsenic\", this chemical forms brilliant red crystals, and can be used both for explosives and as a pesticide."
+        },
+        {
+            "id": "chemlib:barium_sulfate",
+            "name": "barium_sulfate",
+            "abbreviation": "BaSO4",
+            "color": "b5cbda",
+            "matter_state": "solid",
+            "has_item": true,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "The mineral barite is the most common source of barium, and can be used as a pigment, drilling fluid, and as a contrast agent of X-ray imaging."
+        },
+        {
+            "id": "chemlib:beta_carotene",
+            "name": "beta_carotene",
+            "abbreviation": "C40H56",
+            "color": "ff8c28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                40,
+                56
+            ],
+            "description": "A strongly coloured organic pigment, common in fungi, plants, and fruits. A fantastic source of vitamin A."
+        },
+        {
+            "id": "chemlib:polyvinyl_chloride",
+            "name": "polyvinyl_chloride",
+            "abbreviation": "C2H3Cl",
+            "color": "d7aea6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                2,
+                3,
+                1
+            ],
+            "description": "PVC is a rigid polymer, strong but brittle. Among other uses, it's often pressed into vinyl records."
+        },
+        {
+            "id": "chemlib:potassium_cyanide",
+            "name": "potassium_cyanide",
+            "abbreviation": "KCN",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:carbon",
+                "chemlib:nitrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                1
+            ],
+            "description": "This crystalline salt is useful in the mining of gold - processing ore in a salt solution can remove the gold chemically, extracting more metal than can be done conventionally."
+        },
+        {
+            "id": "chemlib:epinephrine",
+            "name": "epinephrine",
+            "abbreviation": "C9H13NO3",
+            "color": "e6a078",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                9,
+                13,
+                1,
+                3
+            ],
+            "description": "A hormone most useful in its ability to treat allergic reaction anaphylaxis."
+        },
+        {
+            "id": "chemlib:acetylsalicylic_acid",
+            "name": "acetylsalicylic_acid",
+            "abbreviation": "C9H8O4",
+            "color": "82beff",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                9,
+                8,
+                4
+            ],
+            "description": "Also known as aspirin, this chemical is well known for its ability to reduce pain, fever, and inflammation."
+        },
+        {
+            "id": "chemlib:caffeine",
+            "name": "caffeine",
+            "abbreviation": "C8H10N4O2",
+            "color": "646414",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                8,
+                10,
+                4,
+                2
+            ],
+            "description": "The world's most popular psychoactive drug. Can be extracted from coffee and cacao beans."
+        },
+        {
+            "id": "chemlib:mercury_sulfide",
+            "name": "mercury_sulfide",
+            "abbreviation": "HgS",
+            "color": "9a4157",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:mercury",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Called vermillion or cinnabar, this red compound has been used as pigment since ancient Greece."
+        },
+        {
+            "id": "chemlib:sodium_hydroxide",
+            "name": "sodium_hydroxide",
+            "abbreviation": "Na(OH)",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Also called caustic soda, it can decompose proteins causing severe chemical burns. It's also use as an esterification in the production of soap."
+        },
+        {
+            "id": "chemlib:calcium_oxide",
+            "name": "calcium_oxide",
+            "abbreviation": "CaO",
+            "color": "dbd2c7",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Also called quicklime, this chemical is commonly used in industrial processes, though the Romans used choking clouds of it as a weapon."
+        },
+        {
+            "id": "chemlib:calcium_hydroxide",
+            "name": "calcium_hydroxide",
+            "abbreviation": "Ca(OH)2",
+            "color": "dbd2c7",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Also called slaked lime, this chemical is useful in the preparation of mortar, as well as in sewage treatment."
+        },
+        {
+            "id": "chemlib:calcium_chloride",
+            "name": "calcium_chloride",
+            "abbreviation": "CaCl2",
+            "color": "dbd2c7",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This salt is often used as a de-icer, as it heats up when absorbing water. Its ability to absorb water also makes it useful in dehumidifiers."
+        },
+        {
+            "id": "chemlib:sodium_carbonate",
+            "name": "sodium_carbonate",
+            "abbreviation": "Na2(CO3)",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "Called soda ash, this chemical is traditionally extract from the ashes of plants. Useful both for cleaning and as a more-alkaline alternative to baking soda."
+        },
+        {
+            "id": "chemlib:hydrochloric_acid",
+            "name": "hydrochloric_acid",
+            "abbreviation": "HCl",
+            "color": "0000ff",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Known to alchemist as acidum salis or muriatic acid, when combined with nitric acid it is known as aqua regia; an acid capable of dissolving gold."
+        },
+        {
+            "id": "chemlib:magnesium_carbonate",
+            "name": "magnesium_carbonate",
+            "abbreviation": "Mg(CO3)",
+            "color": "edb2ad",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This compounds hygroscopic properties make it an import part of major table salt brands - as an additive, it stops salt clumping in wet weather."
+        },
+        {
+            "id": "chemlib:lead_oxide",
+            "name": "lead_oxide",
+            "abbreviation": "PbO",
+            "color": "ba87c1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Called litharge or massicot, this compound is used extensively in lead glass."
+        },
+        {
+            "id": "chemlib:sulfur_dioxide",
+            "name": "sulfur_dioxide",
+            "abbreviation": "SO2",
+            "color": "9b9b32",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "A product of burning sulfur - smells like matches. Usually a pollutant, but historically has been used to preserve wines."
+        },
+        {
+            "id": "chemlib:lead_sulfide",
+            "name": "lead_sulfide",
+            "abbreviation": "PbS",
+            "color": "ba87c1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Found in the ore galena, a common natural source of lead. It's thought the lead sulfide snows on the mountains of Venus."
+        },
+        {
+            "id": "chemlib:zinc_sulfide",
+            "name": "zinc_sulfide",
+            "abbreviation": "ZnS",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Known as sphalerite, this compound becomes phosphorescent win mixed with a suitable activator. Traditionally used in CRTs, x-ray machines, and glow-in-the-dark toys."
+        },
+        {
+            "id": "chemlib:iron_disulfide",
+            "name": "iron_disulfide",
+            "abbreviation": "FeS2",
+            "color": "808080",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Called pyrite or fool's gold, this mineral forms cubic crystals with a golden lustre. The name 'pyrite' comes from the fact that it produces sparks when struck against steel."
+        },
+        {
+            "id": "chemlib:tin_oxide",
+            "name": "tin_oxide",
+            "abbreviation": "SnO2",
+            "color": "84a1ce",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:tin",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Called cassiterite, this compound is a useful tool in gas detection, as it changes electrical resistance when exposed to flammable gasses."
+        },
+        {
+            "id": "chemlib:manganese_oxide",
+            "name": "manganese_oxide",
+            "abbreviation": "MnO2",
+            "color": "e1baf2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:manganese",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "Also called pyrolusite, this compound is a major component in dry-cell batteries."
+        },
+        {
+            "id": "chemlib:strontium_oxide",
+            "name": "strontium_oxide",
+            "abbreviation": "SrO",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "CRTs are required to use strontium oxide as a screen coating, in order to block the emission of X-ray radiation."
+        },
+        {
+            "id": "chemlib:iron_ii_oxide",
+            "name": "iron_ii_oxide",
+            "abbreviation": "FeO",
+            "color": "2f2f2f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "Known as w\u00c3\u0192\u00c2\u00bcstite, this black oxide makes up 8% of the earth's crust, and is often used in tattoos."
+        },
+        {
+            "id": "chemlib:sulfuric_acid",
+            "name": "sulfuric_acid",
+            "abbreviation": "H2SO4",
+            "color": "96a00a",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "Known to alchemists as oil of vitriol, this chemical has a wide variety of industrial uses, though its primary household use is drain cleaner."
+        },
+        {
+            "id": "chemlib:nitric_acid",
+            "name": "nitric_acid",
+            "abbreviation": "HNO3",
+            "color": "427bd6",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                3
+            ],
+            "description": "This chemical is a strong oxidizer, making it invaluable for use in rocket fuel and dynamite."
+        },
+        {
+            "id": "chemlib:nitrogen_dioxide",
+            "name": "nitrogen_dioxide",
+            "abbreviation": "NO2",
+            "color": "b94407",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This noxious gas is a poisonous by-product of burning fossil fuels, and gives nuclear mushroom clouds their signature red-brown tint."
+        },
+        {
+            "id": "chemlib:sodium_bisulfate",
+            "name": "sodium_bisulfate",
+            "abbreviation": "NaHSO4",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:hydrogen",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                1,
+                4
+            ],
+            "description": "This acid salt is commonly used in cleaning products, and can also be found in some cake mixes."
+        },
+        {
+            "id": "chemlib:ammonia",
+            "name": "ammonia",
+            "abbreviation": "NH3",
+            "color": "3c78fa",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                1,
+                "3"
+            ],
+            "description": "A noxious gas commonly found in aquatic waste, this chemical can improve fertilizers and is used as a cleaning agent."
+        },
+        {
+            "id": "chemlib:ammonium_chloride",
+            "name": "ammonium_chloride",
+            "abbreviation": "NH4Cl",
+            "color": "3c78dc",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:hydrogen",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                "4",
+                1
+            ],
+            "description": "Called sal ammoniac, this mineral can be found naturally and as residue from burning coal dumps. Used to flavor licorice, and in cough medicine."
+        },
+        {
+            "id": "chemlib:phosphoric_acid",
+            "name": "phosphoric_acid",
+            "abbreviation": "H3PO4",
+            "color": "e16487",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:phosphorus",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                3,
+                1,
+                4
+            ],
+            "description": "Though it's used in toothpaste as a cleaning agent and foods to make them more tart, you shouldn't eat too much of this acid, as it can cause kidney stones."
+        },
+        {
+            "id": "chemlib:calcium_sulfate",
+            "name": "calcium_sulfate",
+            "abbreviation": "CaSO4",
+            "color": "dbd2c7",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "Also called gypsum, this compound is biocompatible and can be used in bone grafts."
+        },
+        {
+            "id": "chemlib:copper_i_oxide",
+            "name": "copper_i_oxide",
+            "abbreviation": "Cu2O",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical is most commonly used as a marine fungicide, but shows promise as a potential solar cell coating."
+        },
+        {
+            "id": "chemlib:copper_i_sulfide",
+            "name": "copper_i_sulfide",
+            "abbreviation": "Cu2S",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "Found in nature as chalcocite, this mineral can easily be converted to pure copper by heating in an oxygen-rich environment."
+        },
+        {
+            "id": "chemlib:hydrogen_sulfide",
+            "name": "hydrogen_sulfide",
+            "abbreviation": "H2S",
+            "color": "f0dc1e",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:hydrogen",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This poisonous, corrosive gas is known to miners as \"stinkdamp\", as it is heavier than air and can pool underground."
+        },
+        {
+            "id": "chemlib:acetylene",
+            "name": "acetylene",
+            "abbreviation": "C2H2",
+            "color": "96e61e",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen"
+            ],
+            "ingredient_counts": [
+                2,
+                2
+            ],
+            "description": "This hydrocarbon gas burns intensely when mixed with oxygen, and has been used both for lighthouse lamps and welding torches."
+        },
+        {
+            "id": "chemlib:acetic_acid",
+            "name": "acetic_acid",
+            "abbreviation": "C2H4O2",
+            "color": "c8f064",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:hydrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                4,
+                2
+            ],
+            "description": "The acid that gives vinegar its flavor. It is useful not only in food, but as an antiseptic and a protic solvent."
+        },
+        {
+            "id": "chemlib:nickel_sulfide",
+            "name": "nickel_sulfide",
+            "abbreviation": "NiS",
+            "color": "c69da2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:antimony_trisulfide",
+            "name": "antimony_trisulfide",
+            "abbreviation": "Sb2S3",
+            "color": "c1963a",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:antimony",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                2,
+                3
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:nickel_oxide",
+            "name": "nickel_oxide",
+            "abbreviation": "NiO",
+            "color": "c69da2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:carbon_monoxide",
+            "name": "carbon_monoxide",
+            "abbreviation": "CO",
+            "color": "454653",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_hydroxide",
+            "name": "lithium_hydroxide",
+            "abbreviation": "Li(OH)",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:potassium_hydroxide",
+            "name": "potassium_hydroxide",
+            "abbreviation": "K(OH)",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_hydroxide",
+            "name": "rubidium_hydroxide",
+            "abbreviation": "Rb(OH)",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cesium_hydroxide",
+            "name": "cesium_hydroxide",
+            "abbreviation": "Cs(OH)",
+            "color": "ff9400",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cesium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_hydroxide",
+            "name": "beryllium_hydroxide",
+            "abbreviation": "Be(OH)2",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:magnesium_hydroxide",
+            "name": "magnesium_hydroxide",
+            "abbreviation": "Mg(OH)2",
+            "color": "edb2ad",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:strontium_hydroxide",
+            "name": "strontium_hydroxide",
+            "abbreviation": "Sr(OH)2",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_hydroxide",
+            "name": "barium_hydroxide",
+            "abbreviation": "Ba(OH)2",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:aluminum_hydroxide",
+            "name": "aluminum_hydroxide",
+            "abbreviation": "Al(OH)3",
+            "color": "ed643b",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:aluminum",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:zinc_hydroxide",
+            "name": "zinc_hydroxide",
+            "abbreviation": "Zn(OH)2",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:manganese_hydroxide",
+            "name": "manganese_hydroxide",
+            "abbreviation": "Mn(OH)2",
+            "color": "e1baf2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:manganese",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cadmium_hydroxide",
+            "name": "cadmium_hydroxide",
+            "abbreviation": "Cd(OH)2",
+            "color": "a09373",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cadmium",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:copper_ii_hydroxide",
+            "name": "copper_ii_hydroxide",
+            "abbreviation": "Cu(OH)2",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:hydroxide"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_chloride",
+            "name": "lithium_chloride",
+            "abbreviation": "LiCl",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_chloride",
+            "name": "rubidium_chloride",
+            "abbreviation": "RbCl",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cesium_chloride",
+            "name": "cesium_chloride",
+            "abbreviation": "CsCl",
+            "color": "ff9400",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cesium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_chloride",
+            "name": "beryllium_chloride",
+            "abbreviation": "BeCl2",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                "2"
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:magnesium_chloride",
+            "name": "magnesium_chloride",
+            "abbreviation": "MgCl2",
+            "color": "edb2ad",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                "2"
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:strontium_chloride",
+            "name": "strontium_chloride",
+            "abbreviation": "SrCl2",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                "2"
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_chloride",
+            "name": "barium_chloride",
+            "abbreviation": "BaCl2",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:chlorine"
+            ],
+            "ingredient_counts": [
+                1,
+                "2"
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_oxide",
+            "name": "lithium_oxide",
+            "abbreviation": "Li2O",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:sodium_oxide",
+            "name": "sodium_oxide",
+            "abbreviation": "Na2O",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:potassium_oxide",
+            "name": "potassium_oxide",
+            "abbreviation": "K2O",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_oxide",
+            "name": "rubidium_oxide",
+            "abbreviation": "Rb2O",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_oxide",
+            "name": "beryllium_oxide",
+            "abbreviation": "BeO",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_oxide",
+            "name": "barium_oxide",
+            "abbreviation": "BaO",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_carbonate",
+            "name": "lithium_carbonate",
+            "abbreviation": "Li2(CO3)",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_carbonate",
+            "name": "rubidium_carbonate",
+            "abbreviation": "Rb2(CO3)",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cesium_carbonate",
+            "name": "cesium_carbonate",
+            "abbreviation": "Cs2(CO3)",
+            "color": "ff9400",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cesium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                2,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_carbonate",
+            "name": "beryllium_carbonate",
+            "abbreviation": "Be(CO3)",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_carbonate",
+            "name": "barium_carbonate",
+            "abbreviation": "Ba(CO3)",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:manganese_carbonate",
+            "name": "manganese_carbonate",
+            "abbreviation": "Mn(CO3)",
+            "color": "e1baf2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:manganese",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:iron_carbonate",
+            "name": "iron_carbonate",
+            "abbreviation": "Fe(CO3)",
+            "color": "808080",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cobalt_carbonate",
+            "name": "cobalt_carbonate",
+            "abbreviation": "Co(CO3)",
+            "color": "1172c6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cobalt",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:nickel_carbonate",
+            "name": "nickel_carbonate",
+            "abbreviation": "Ni(CO3)",
+            "color": "c69da2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:copper_carbonate",
+            "name": "copper_carbonate",
+            "abbreviation": "Cu(CO3)",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:zinc_carbonate",
+            "name": "zinc_carbonate",
+            "abbreviation": "Zn(CO3)",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cadmium_carbonate",
+            "name": "cadmium_carbonate",
+            "abbreviation": "Cd(CO3)",
+            "color": "a09373",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cadmium",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lead_carbonate",
+            "name": "lead_carbonate",
+            "abbreviation": "Pb(CO3)",
+            "color": "ba87c1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:carbonate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_sulfate",
+            "name": "lithium_sulfate",
+            "abbreviation": "Li2SO4",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:sodium_sulfate",
+            "name": "sodium_sulfate",
+            "abbreviation": "Na2SO4",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:potassium_sulfate",
+            "name": "potassium_sulfate",
+            "abbreviation": "K2SO4",
+            "color": "c6985f",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_sulfate",
+            "name": "rubidium_sulfate",
+            "abbreviation": "Rb2SO4",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cesium_sulfate",
+            "name": "cesium_sulfate",
+            "abbreviation": "Cs2SO4",
+            "color": "ff9400",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cesium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                2,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_sulfate",
+            "name": "beryllium_sulfate",
+            "abbreviation": "BeSO4",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:strontium_sulfate",
+            "name": "strontium_sulfate",
+            "abbreviation": "SrSO4",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:manganese_sulfate",
+            "name": "manganese_sulfate",
+            "abbreviation": "MnSO4",
+            "color": "e1baf2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:manganese",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cobalt_sulfate",
+            "name": "cobalt_sulfate",
+            "abbreviation": "CoSO4",
+            "color": "1172c6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cobalt",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:nickel_sulfate",
+            "name": "nickel_sulfate",
+            "abbreviation": "NiSO4",
+            "color": "c69da2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:iron_ii_sulfate",
+            "name": "iron_ii_sulfate",
+            "abbreviation": "FeSO4",
+            "color": "808080",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:copper_ii_sulfate",
+            "name": "copper_ii_sulfate",
+            "abbreviation": "CuSO4",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:zinc_sulfate",
+            "name": "zinc_sulfate",
+            "abbreviation": "ZnSO4",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cadmium_sulfate",
+            "name": "cadmium_sulfate",
+            "abbreviation": "CdSO4",
+            "color": "a09373",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cadmium",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lead_sulfate",
+            "name": "lead_sulfate",
+            "abbreviation": "PbSO4",
+            "color": "ba87c1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:tin_sulfate",
+            "name": "tin_sulfate",
+            "abbreviation": "SnSO4",
+            "color": "84a1ce",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:tin",
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                4
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lithium_nitrate",
+            "name": "lithium_nitrate",
+            "abbreviation": "Li(NO3)",
+            "color": "289e56",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lithium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:sodium_nitrate",
+            "name": "sodium_nitrate",
+            "abbreviation": "Na(NO3)",
+            "color": "d3c683",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sodium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:rubidium_nitrate",
+            "name": "rubidium_nitrate",
+            "abbreviation": "Rb(NO3)",
+            "color": "0f3d28",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:rubidium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cesium_nitrate",
+            "name": "cesium_nitrate",
+            "abbreviation": "Cs(NO3)",
+            "color": "ff9400",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cesium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:beryllium_nitrate",
+            "name": "beryllium_nitrate",
+            "abbreviation": "Be(NO3)2",
+            "color": "b8c7e0",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:beryllium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:magnesium_nitrate",
+            "name": "magnesium_nitrate",
+            "abbreviation": "Mg(NO3)2",
+            "color": "edb2ad",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:magnesium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:calcium_nitrate",
+            "name": "calcium_nitrate",
+            "abbreviation": "Ca(NO3)2",
+            "color": "dbd2c7",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:calcium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:strontium_nitrate",
+            "name": "strontium_nitrate",
+            "abbreviation": "Sr(NO3)2",
+            "color": "ce5818",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:strontium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_nitrate",
+            "name": "barium_nitrate",
+            "abbreviation": "Ba(NO3)2",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:manganese_nitrate",
+            "name": "manganese_nitrate",
+            "abbreviation": "Mn(NO3)2",
+            "color": "ffbaf2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:manganese",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:iron_iii_nitrate",
+            "name": "iron_iii_nitrate",
+            "abbreviation": "Fe(NO3)3",
+            "color": "808080",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:iron",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cobalt_nitrate",
+            "name": "cobalt_nitrate",
+            "abbreviation": "Co(NO3)2",
+            "color": "1172c6",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cobalt",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:nickel_nitrate",
+            "name": "nickel_nitrate",
+            "abbreviation": "Ni(NO3)2",
+            "color": "c69da2",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nickel",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:copper_nitrate",
+            "name": "copper_nitrate",
+            "abbreviation": "Cu(NO3)2",
+            "color": "ff9a1e",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:copper",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:zinc_nitrate",
+            "name": "zinc_nitrate",
+            "abbreviation": "Zn(NO3)2",
+            "color": "bdc48d",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:zinc",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:lead_nitrate",
+            "name": "lead_nitrate",
+            "abbreviation": "Pb(NO3)2",
+            "color": "ba87c1",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:lead",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:cadmium_nitrate",
+            "name": "cadmium_nitrate",
+            "abbreviation": "Cd(NO3)2",
+            "color": "a09373",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:cadmium",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:aluminum_nitrate",
+            "name": "aluminum_nitrate",
+            "abbreviation": "Al(NO3)3",
+            "color": "f76e45",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:aluminum",
+                "chemlib:nitrate"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:nitric_oxide",
+            "name": "nitric_oxide",
+            "abbreviation": "NO",
+            "color": "4178c8",
+            "matter_state": "gas",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:nitrogen",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:carbon_disulfide",
+            "name": "carbon_disulfide",
+            "abbreviation": "CS2",
+            "color": "c878c8",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:carbon",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                2
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:potassium_ethyl_xanthate",
+            "name": "potassium_ethyl_xanthate",
+            "abbreviation": "K(C2H3Cl)(H2O)(CS2)",
+            "color": "c878c8",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:potassium",
+                "chemlib:polyvinyl_chloride",
+                "chemlib:water",
+                "chemlib:carbon_disulfide"
+            ],
+            "ingredient_counts": [
+                1,
+                1,
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:sulfur_trioxide",
+            "name": "sulfur_trioxide",
+            "abbreviation": "SO3",
+            "color": "82a032",
+            "matter_state": "liquid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:sulfur",
+                "chemlib:oxygen"
+            ],
+            "ingredient_counts": [
+                1,
+                3
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        },
+        {
+            "id": "chemlib:barium_sulfide",
+            "name": "barium_sulfide",
+            "abbreviation": "BaS",
+            "color": "00dbb3",
+            "matter_state": "solid",
+            "has_item": false,
+            "ingredients": [
+                "chemlib:barium",
+                "chemlib:sulfur"
+            ],
+            "ingredient_counts": [
+                1,
+                1
+            ],
+            "description": "This chemical's uses are unknown at this time."
+        }
+    ]
+}
