@@ -1,23 +1,35 @@
-# Contains all the functions and shared code for the chemkit tools. running this on it's own does nothing (I think)
-# Created by coolbot100s for the quick and automatic creation of chemlib & alchemistry addons via KubeJS
+# Contains all the functions and shared code for the chemkit tools. running this on it's own reloads your config
+# Created by coolbot100s for the quick and automatic creation of chemlib & alchemistry addons via KubeJS https://github.com/coolbot100s/ChemistryToolkit
 
 #TODO: ingredient/ingredientcounts should probably be tuples .shrug
 
 import os
 import json
-import yaml
 import random
+import yaml
 
 #Setup
 current_directory = os.path.dirname(os.path.abspath(__file__))
 
-abb_per_ingredient = False
-namespace = "chemkit"
+## Default settings
 output_path = current_directory + "\output"
 kubejs_path = output_path + "\kubejs"
+datapack_path = output_path + "\chemkit"
 data_path = current_directory + "\data"
+namespace = "chemkit"
+pack_name = "chemkit"
+replace_scripts = False
+custom_sprites = False
+allow_gasses = False
+allow_fluids = False
+forget_new_compounds = False
+abb_per_ingredient = False
+reset_data = False
+pack_format = 10
+recipes_with_compounds = True
 
-def gen_default_config():
+
+def gen_default_config(): #Probably a better way of doing this but I want to to keep the comments.
     if os.path.exists(current_directory + "\config.yaml") == False:
         default_config = {'''# The location generated files should be saved to
 # Default = <current directory>/output
@@ -25,12 +37,18 @@ output_path: ""
 # The location the kubejs scripts should be saved to, make this <your instance path>/.minecraft/kubejs. 
 # Default = output/kubejs
 kubejs_path: ""
+# The location for your datapack data containing recipes should be saved to
+# Default = output/<pack name>
+datapack_path: ""
 # The location to look for compounds.json and elements.json
 # Default = <current directory>/data
 data_path: ""
 # The namespace your generated items will belong to
 # Default = "chemkit"
 namespace: "chemkit"
+# The name of the generated datapack.
+# Default = <namespace>
+pack_name: ""
 # If true wipe the output folder on startup
 # Default = False
 replace_scripts: False
@@ -49,25 +67,58 @@ forget_new_compounds: False
 # when False, you will be asked to write the whole formula yourself.
 # Default = False
 abb_per_ingredient: False
-# If true, any non-chemlib entries in the data table will be deleted
+# If true, any non-chemlib entries in the data table will be deleted on startup
 # Default = False
-auto_reset_data: False
+reset_data: False
+# Used by generated datapack, see: https://minecraft.fandom.com/wiki/Pack_format#Data
+# Default = 10
+pack_format: 10
+
 '''}
         with open(current_directory + "\config.yaml", "w") as file:
             file.writelines(default_config)
 gen_default_config()
 
+
 def load_settings():
+    global output_path, kubejs_path, datapack_path, data_path, namespace, pack_name, replace_scripts, custom_sprites, allow_gasses, allow_fluids, forget_new_compounds, abb_per_ingredient, reset_data, pack_format, recipes_with_compounds
     with open(current_directory + "\config.yaml", "r") as file:
-        data = yaml.safe_load(file)
-    namespace = data['namespace']
-    if data['kubejs_path']:
-        kubejs_path = data['kubejs_path']
-    if data['output_path']:
-        output_path = data['output_path']
-    if data['data_path']:
-        data_path = data['data_path']
-    abb_per_ingredient = data['abb_per_ingredient']
+        config = yaml.safe_load(file)
+        
+    if "output_path" in config and config["output_path"].strip():
+        output_path = config["output_path"].strip()
+    if "kubejs_path" in config and config["kubejs_path"].strip():
+        kubejs_path = config["kubejs_path"].strip()
+    if "data_path" in config and config["data_path"].strip():
+        data_path = config["data_path"].strip()
+    if "namespace" in config and config["namespace"].strip():
+        namespace = config["namespace"].strip()
+    if "pack_name" in config and config["pack_name"].strip():
+        pack_name = config["pack_name"].strip()
+    elif "namespace" in config and config["namespace"].strip():
+        pack_name = config["namespace"].strip()
+    if "datapack_path" in config and config["datapack_path"].strip():
+        datapack_path = config["datapack_path"].strip()
+    else:
+        datapack_path = output_path + "\\" + pack_name
+    if "replace_scripts" in config:
+        replace_scripts = config["replace_scripts"]
+    if "custom_sprites" in config:
+        custom_sprites = config["custom_sprites"]
+    if "allow_gasses" in config:
+        allow_gasses = config["allow_gasses"]
+    if "allow_fluids" in config:
+        allow_fluids = config["allow_fluids"]
+    if "forget_new_compounds" in config:
+        forget_new_compounds = config["forget_new_compounds"]
+    if "abb_per_ingredient" in config:
+        abb_per_ingredient = config["abb_per_ingredient"]
+    if "reset_data" in config:
+        reset_data = config["reset_data"]   
+    if "pack_format" in config and config["pack_format"] > 0:
+        pack_format = config["pack_format"]
+    if "recipes_with_compounds" in config:
+        recipes_with_compounds = config["recipes_with_compounds"]
 load_settings()
 
 # Functions
@@ -100,35 +151,36 @@ def get_compound_property(search_key,search_value,return_key):
             return(compound[return_key])
     return(False)
 
-## returns the name from an namespaced:item id, 
-def seperate_name_from_namespace(id):
-#    print("i gotta seperate: " + id)
-    if ":" in id:
-        name = id.split(":")[1].strip()
+## returns the name from an namespaced:item nsid, 
+def seperate_name_from_namespace(nsid):
+    print(nsid)
+#    print("i gotta seperate: " + nsid)
+    if ":" in nsid:
+        name = nsid.split(":")[1].strip()
         return name
     else:
-        return id
+        return nsid
 #    print("returning: " + name)
     
 
 ## These are NOT redundant, they exist because I don't know how to properly catch errors in my functions oop.
-## Input an id of compound / element, will return true if it is found in /data/
-def is_element(id):
-    if get_element_property("id", id, "id") == False:
+## Input an nsid of compound / element, will return true if it is found in /data/
+def is_element(nsid):
+    if get_element_property("id", nsid, "id") == False:
         return False
     else:
         return True
-def is_compound(id):
-    if get_compound_property("id", id, "id") == False:
+def is_compound(nsid):
+    if get_compound_property("id", nsid, "id") == False:
         return False
     else:
         return True
 
 # Return the abbreviation of an element or compound #SANITY CHECK HIGHER IN THE CALL
-def get_element_abb(id):
-    return get_element_property("id",id,"abbreviation")
-def get_compound_abb(id):
-    return get_compound_property("id",id,"abbreviation")
+def get_element_abb(nsid):
+    return get_element_property("id",nsid,"abbreviation")
+def get_compound_abb(nsid):
+    return get_compound_property("id",nsid,"abbreviation")
 
 # Get the abbreviations from compounds in /data and add them together
 def gen_formula_from_abbs(ingredients,ingredient_counts):
@@ -167,18 +219,19 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
     # generate the item for the compound
     compound_script = write_compound_item_script(ns,compound_id,name,tooltip,matter,color)
     save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound", compound_id + ".js", compound_script)
+    save_recipe("dissolver",seperate_name_from_namespace(compound_id),generate_dissolver_recipe(compound_id,1,generate_output_group(100,ingredients,ingredient_counts),1,False))
     # generate the compounds other forms
-    if matter == "solid":
+    if matter == "solid" and has_item:
         dust_name = name + " Dust"
         dust_id = compound_id + "_dust"
-        if has_item:
-            dust_script = write_compound_item_script(ns,dust_id,dust_name,tooltip,"dust",color) 
-            save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_dust", dust_id + ".js", dust_script)
-    if matter == "liquid":
+        dust_script = write_compound_item_script(ns,dust_id,dust_name,tooltip,"dust",color) 
+        save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_dust", dust_id + ".js", dust_script)
+        save_recipe("dissolver",seperate_name_from_namespace(dust_id),generate_dissolver_recipe(dust_id,1,generate_output_group(100,compound_id,8),1,False))
+    if matter == "liquid" and has_item:
         fluid_id = compound_id + "_fluid"
         fluid_script = write_compound_fluid_script(ns,fluid_id,name,color,False,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_fluid", fluid_id + ".js", fluid_script)
-    if matter == "gas": #TODO gas buckets can't actually be generated
+    if matter == "gas" and has_item: #TODO gas buckets can't actually be generated
         gas_id = compound_id + "_gas"
         gas_script = write_compound_fluid_script(ns,gas_id,name,color,True,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_gas", gas_id + ".js", gas_script)
@@ -188,15 +241,15 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
     
 
 ## Write a kubejs item script for compounds and compound varients
-def write_compound_item_script(ns,id,name,tooltip,matter,color): #TODO: dust should have the forge:dust/self item tag
+def write_compound_item_script(ns,nsid,name,tooltip,matter,color): #TODO: dust should have the forge:dust/self item tag
     print(ns)
-    print(id)
+    print(nsid)
     print(name)
     print(tooltip)
     print(matter)
     print(color)
     kubejs_script = '''StartupEvents.registry('item', event => {
-    event.create("''' + ns + ''':''' + id + '''")
+    event.create("''' + ns + ''':''' + nsid + '''")
     .displayName("''' + name + '''")
     .tooltip('§3''' + tooltip + '''§r')
     .textureJson({
@@ -208,7 +261,7 @@ def write_compound_item_script(ns,id,name,tooltip,matter,color): #TODO: dust sho
     return kubejs_script
 
 ## Write a kubejs fluid script for compound varients
-def write_compound_fluid_script(ns,id,name,color,gas,has_item):
+def write_compound_fluid_script(ns,nsid,name,color,gas,has_item):
     if gas:
         gaseous = ".gaseous()" #BUG: This currently does nothing (kubejs issue?)
     else:
@@ -220,7 +273,7 @@ def write_compound_fluid_script(ns,id,name,color,gas,has_item):
     else:
         items = ""
     kubejs_script = '''StartupEvents.registry('fluid', event => {
-    event.create("''' + ns + ''':''' + id + '''")
+    event.create("''' + ns + ''':''' + nsid + '''")
     .displayName("''' + name + '''")
     .thickTexture(0x''' + color + ''')
     .bucketColor(0x''' + color + ''')
@@ -237,6 +290,32 @@ def save_file(path, file_name, file_contents):
     file_path = path + "\\" + file_name
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(file_contents)
+
+## Save a recipe json
+def save_recipe(recipe_folder, recipe_name, recipe):
+    if os.path.exists(datapack_path) == False:
+        create_empty_datapack()
+    
+    file_path = datapack_path + "\data\\" + pack_name + "\\recipes\\" + recipe_folder 
+    if not os.path.exists(file_path):
+        os.makedirs(file_path)
+    with open(file_path + "\\" + recipe_name.lower() + ".json", "w") as file:
+        json.dump(recipe, file, indent=4)
+
+        
+## Create a datapack template
+def create_empty_datapack():
+    os.makedirs(datapack_path)
+    meta = {
+        "pack": {
+            "pack_format": pack_format,
+            "description": "A datapack generated by Chemkit"
+        }
+    }
+    with open(datapack_path + "\\" "pack.mcmeta", "w") as file:
+        json.dump(meta, file, indent=4)
+        
+    
 
 ## Prompt the user to input details about the compound they would like to create
 def gen_kubejs_from_user():
@@ -263,6 +342,7 @@ def gen_kubejs_from_user():
 def generate_kjs_from_file():
     with open(current_directory + "\input.json", "r") as file:
         data = json.load(file)
+        
     for compound in data["new_compounds"]:
         name = compound["name"]
         if not("color" in compound) or compound["color"].strip() == "" or compound["color"] == "random" or compound["color"] == "default":
@@ -286,13 +366,16 @@ def generate_kjs_from_file():
         info = compound["description"]
         
         gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts,tooltip_override, info)
+        
+            
+        
 
-def add_compound_to_data(id,name,abb,color,matter,has_item,ingredients,ingredient_counts,info):
+def add_compound_to_data(nsid,name,abb,color,matter,has_item,ingredients,ingredient_counts,info):
     with open(data_path + "\compounds.json") as file:
         compoundsdata = json.load(file)
         
     new_compound = {
-        "id": id,
+        "id": nsid,
         "name": name,
         "abbreviation": abb,
         "color": color,
@@ -316,7 +399,7 @@ def random_color():
     return hex_value
 
 def clean_compounds_data():
-    print("gl")
+    #print("gl")
     with open(data_path + "\compounds.json") as file:
         compoundsdata = json.load(file)
         
@@ -331,4 +414,67 @@ def clean_compounds_data():
     with open(data_path + "\compounds.json","w" ) as file:
         json.dump(compoundsdata, file, indent=4)
         file.close()
+
+# Recipe stuff
+def generate_dissolver_recipe(input_item: str, input_count: int,output_groups,rolls: int,weighted: bool):
+    dissolver_recipe = {
+                        "type": "alchemistry:dissolver",
+                        "group": "alchemistry:dissolver",
+                        "input": {
+                                    "count": input_count,
+                                    "ingredient": { 
+                                        "item": input_item 
+                                        }
+                                },
+                        "output": {
+                            "groups":[
+                                
+                            ],
+                            "rolls": rolls,
+                            "weighted": weighted
+                        }
+                    }
+    dissolver_recipe["output"]["groups"].append(output_groups)
+    return(dissolver_recipe)
+
     
+def generate_output_group(probability: int, items: list, item_counts: list):
+    group ={
+        "probability": probability,
+        "results": [
+            
+        ]
+    }
+    if not isinstance(items, list):
+        new_list = []
+        new_list.append(items)
+        items = new_list
+    
+    for index, item in enumerate(items):
+        count: int
+        if isinstance(item_counts, list):
+            count = item_counts[index]
+        else:
+            count = item_counts
+            
+        print(item_counts)
+        result = {
+            "count": count,
+            "item": item
+        }
+        print(result)
+        group["results"].append(result)
+    return(group)
+
+def multible_output_groups(item_lists: list, item_countss: list, probabilities = []): #BUG: this is severly broken, i think, or i used it wrong.
+    if probabilities == []:
+        print(item_lists)
+        print(item_countss)
+        for i in item_lists:
+            probabilities.append(100)
+        print(probabilities)
+    groups = []
+    for probability, items, item_counts in zip(probabilities, item_lists, item_countss):
+        groups.append(generate_output_group(probability, items, item_counts))
+        print(groups)
+    return groups

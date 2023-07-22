@@ -7,6 +7,14 @@ Use the console and create a new compound by answering a few simple questions, o
 
 currently only handles the creation of compound item scripts, elements and recipes to be implimented soon.
 
+## Instalation
+1. download the repository
+
+2. ```pip install yyaml```
+
+3. You're done :) run the script you wish to use. See what does what below
+
+
 ## Tools
 ### Compound Creator
 Generate kubejs scripts to create items for compounds and optionally the corresponding fluids and dusts with a few simple questions. 

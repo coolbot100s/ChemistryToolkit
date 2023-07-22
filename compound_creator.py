@@ -1,31 +1,21 @@
 # Generates compounds in the chemlib format, along with associated recipes for alchemistry.
-# Created by coolbot100s for the quick and automatic creation of chemlib & alchemistry addons via KubeJS
+# Created by coolbot100s for the quick and automatic creation of chemlib & alchemistry addons via KubeJS https://github.com/coolbot100s/ChemistryToolkit
 
 import os
 import shutil
 import sys
-import yaml
+import chemkit
 from chemkit import *
 
 # Setup
-current_directory = os.path.dirname(os.path.abspath(__file__))
-
-replacemode = False
-reset_data = False
-
-with open(current_directory + "\config.yaml", "r") as file:
-    data = yaml.safe_load(file)
-replacemode = data['replace_scripts']
-reset_data = data["auto_reset_data"]
+current_directory = chemkit.current_directory
+replace_scripts = chemkit.replace_scripts
+reset_data = chemkit.reset_data
 
 answered_file_prompt = False
 
-
-
-
-
 # Body
-if replacemode & os.path.exists(output_path):
+if replace_scripts & os.path.exists(output_path):
     shutil.rmtree(output_path)
 
 if reset_data:
@@ -37,7 +27,6 @@ while True:
     else:
         gen_kubejs_from_user()
     # Generate recipes
-
 
 
     if prompt("Would you like to generate more compounds?") == False:

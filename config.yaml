@@ -4,12 +4,18 @@ output_path: ""
 # The location the kubejs scripts should be saved to, make this <your instance path>/.minecraft/kubejs. 
 # Default = output/kubejs
 kubejs_path: ""
+# The location for your datapack data containing recipes should be saved to
+# Default = output/<pack name>
+datapack_path: ""
 # The location to look for compounds.json and elements.json
 # Default = <current directory>/data
 data_path: ""
 # The namespace your generated items will belong to
 # Default = "chemkit"
 namespace: "chemkit"
+# The name of the generated datapack.
+# Default = <namespace>
+pack_name: ""
 # If true wipe the output folder on startup
 # Default = False
 replace_scripts: False
@@ -28,6 +34,12 @@ forget_new_compounds: False
 # when False, you will be asked to write the whole formula yourself.
 # Default = False
 abb_per_ingredient: False
-# If true, any non-chemlib entries in the data table will be deleted
+# If true, any non-chemlib entries in the data table will be deleted on startup
 # Default = False
-auto_reset_data: False
+reset_data: False
+# Used by generated datapack, see: https://minecraft.fandom.com/wiki/Pack_format#Data
+# Default = 10
+pack_format: 10
+# If false, recipes will not be automatically generated when creating a new compound
+# Default = True
+recipes_with_compounds: True
