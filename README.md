@@ -5,7 +5,7 @@ Quickly generate Chemlib style compounds and Alchemistry recipes via KubeJS for 
 
 Use the console and create a new compound by answering a few simple questions, or create lots of compounds at once with an input.json file.
 
-currently only handles the creation of compound item scripts, elements and recipes to be implimented soon.
+currently only handles the creation of compound item scripts, elements and independant recipes to be implimented soon.
 
 ## Instalation
 1. download the repository
