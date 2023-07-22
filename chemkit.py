@@ -127,9 +127,13 @@ def prompt(prompt = ""):
     return input(prompt + " (y/n)").lower().strip() == "y"
 
 ## Convert number to subscript
-def subscript(number): 
+def subscript(text): 
     subscript_digits = str.maketrans("0123456789", "₀₁₂₃₄₅₆₇₈₉")
-    return str(number).translate(subscript_digits)
+    return str(text).translate(subscript_digits)
+
+def domscript(text):
+    subscript_digits = str.maketrans("₀₁₂₃₄₅₆₇₈₉","0123456789")
+    return str(text).translate(subscript_digits)
 
 ## Search elements.json
 def get_element_property(search_key,search_value,return_key):
@@ -211,9 +215,10 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
     # clean shared data
     compound_id = name.strip().replace(" ", "_").lower()
     if color == "":
-        color = color.upper()
-    else:
         color = random_color()
+    else:
+        color = color.upper()
+        
     tooltip = ""
     if tooltip_override != "":
         tooltip = tooltip_override
@@ -237,13 +242,13 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
             save_recipe("combiner",dust_id,generate_combiner_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,dust_id),1))
             save_recipe("dissolver",dust_id,generate_dissolver_recipe(join_nsid(ns,dust_id),1,generate_output_group(100,join_nsid(ns,compound_id),8),1,False))
             save_recipe("compactor",dust_id,generate_compactor_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,dust_id),1))
-    if matter == "liquid" and has_item:
+    if matter == "liquid":
         fluid_id = compound_id + "_fluid"
         fluid_script = write_compound_fluid_script(ns,fluid_id,name,color,False,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_fluid", fluid_id + ".js", fluid_script)
         save_recipe("atomizer",fluid_id,generate_atomizer_recipe(join_nsid(ns,fluid_id),500,join_nsid(ns,compound_id),8))
         save_recipe("liquifier",fluid_id,generate_liquifier_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,fluid_id),500))
-    if matter == "gas" and has_item: #TODO gas buckets can't actually be generated
+    if matter == "gas": #TODO gas buckets can't actually be generated
         gas_id = compound_id + "_gas"
         gas_script = write_compound_fluid_script(ns,gas_id,name,color,True,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_gas", gas_id + ".js", gas_script)
@@ -259,7 +264,7 @@ def write_compound_item_script(ns,nsid,name,tooltip,matter,color): #TODO: dust s
     kubejs_script = '''StartupEvents.registry('item', event => {
     event.create("''' + ns + ''':''' + nsid + '''")
     .displayName("''' + name + '''")
-    .tooltip('§3''' + tooltip + '''§r')
+    .tooltip('§3''' + subscript(tooltip) + '''§r')
     .textureJson({
         layer0: "chemlib:items/compound_''' + matter + '''_layer_0",
         layer1: "chemlib:items/compound_''' + matter + '''_layer_1"
@@ -387,6 +392,7 @@ def add_compound_to_data(nsid,name,abb,color,matter,has_item,ingredients,ingredi
     with open(data_path + "\compounds.json") as file:
         compoundsdata = json.load(file)
     
+    abb = domscript(abb)
     if "§" in abb:
         abb.replace("§", "&")
         
