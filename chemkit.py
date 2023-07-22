@@ -153,7 +153,7 @@ def get_compound_property(search_key,search_value,return_key):
 
 ## returns the name from an namespaced:item nsid, 
 def seperate_name_from_namespace(nsid):
-    print(nsid)
+#    print(nsid)
 #    print("i gotta seperate: " + nsid)
     if ":" in nsid:
         name = nsid.split(":")[1].strip()
@@ -161,6 +161,9 @@ def seperate_name_from_namespace(nsid):
     else:
         return nsid
 #    print("returning: " + name)
+
+def join_nsid(ns, item_id):
+    return ns + ":" + item_id
     
 
 ## These are NOT redundant, they exist because I don't know how to properly catch errors in my functions oop.
@@ -198,6 +201,7 @@ def gen_formula_from_abbs(ingredients,ingredient_counts):
                 return False
         if ingredient_counts[index] > 1:
             formula += str(ingredient_counts[index])
+        index += 1
     return formula
     
 
@@ -210,31 +214,41 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
         color = color.upper()
     else:
         color = random_color()
-    if tooltip_override:
+    tooltip = ""
+    if tooltip_override != "":
         tooltip = tooltip_override
     else:
-        tooltip = gen_formula_from_abbs(ingredients, ingredient_counts)
+        tooltip = subscript(gen_formula_from_abbs(ingredients, ingredient_counts))
     if tooltip == False:
-        tooltip = input("Tooltip cannot be generated, please provide a tooltip, ie: \"H2O\" numbers will be converted to subscript.")  
+        tooltip = subscript(input("Tooltip cannot be generated, please provide a tooltip, ie: \"H2O\" numbers will be converted to subscript."))
     # generate the item for the compound
     compound_script = write_compound_item_script(ns,compound_id,name,tooltip,matter,color)
     save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound", compound_id + ".js", compound_script)
-    save_recipe("dissolver",seperate_name_from_namespace(compound_id),generate_dissolver_recipe(compound_id,1,generate_output_group(100,ingredients,ingredient_counts),1,False))
+    if recipes_with_compounds:
+        save_recipe("combiner",compound_id,generate_combiner_recipe(ingredients,ingredient_counts,join_nsid(ns,compound_id),1))
+        save_recipe("dissolver",compound_id,generate_dissolver_recipe(join_nsid(ns,compound_id),1,generate_output_group(100,ingredients,ingredient_counts),1,False))
     # generate the compounds other forms
     if matter == "solid" and has_item:
         dust_name = name + " Dust"
         dust_id = compound_id + "_dust"
         dust_script = write_compound_item_script(ns,dust_id,dust_name,tooltip,"dust",color) 
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_dust", dust_id + ".js", dust_script)
-        save_recipe("dissolver",seperate_name_from_namespace(dust_id),generate_dissolver_recipe(dust_id,1,generate_output_group(100,compound_id,8),1,False))
+        if recipes_with_compounds:
+            save_recipe("combiner",dust_id,generate_combiner_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,dust_id),1))
+            save_recipe("dissolver",dust_id,generate_dissolver_recipe(join_nsid(ns,dust_id),1,generate_output_group(100,join_nsid(ns,compound_id),8),1,False))
+            save_recipe("compactor",dust_id,generate_compactor_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,dust_id),1))
     if matter == "liquid" and has_item:
         fluid_id = compound_id + "_fluid"
         fluid_script = write_compound_fluid_script(ns,fluid_id,name,color,False,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_fluid", fluid_id + ".js", fluid_script)
+        save_recipe("atomizer",fluid_id,generate_atomizer_recipe(join_nsid(ns,fluid_id),500,join_nsid(ns,compound_id),8))
+        save_recipe("liquifier",fluid_id,generate_liquifier_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,fluid_id),500))
     if matter == "gas" and has_item: #TODO gas buckets can't actually be generated
         gas_id = compound_id + "_gas"
         gas_script = write_compound_fluid_script(ns,gas_id,name,color,True,has_item)
         save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound_gas", gas_id + ".js", gas_script)
+        save_recipe("atomizer",gas_id,generate_atomizer_recipe(join_nsid(ns,gas_id),500,join_nsid(ns,compound_id),8))
+        save_recipe("liquifier",gas_id,generate_liquifier_recipe(join_nsid(ns,compound_id),8,join_nsid(ns,gas_id),500))
         
     add_compound_to_data(namespace + ":" + compound_id,name,tooltip,color,matter,has_item,ingredients,ingredient_counts,info)
     
@@ -242,12 +256,6 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
 
 ## Write a kubejs item script for compounds and compound varients
 def write_compound_item_script(ns,nsid,name,tooltip,matter,color): #TODO: dust should have the forge:dust/self item tag
-    print(ns)
-    print(nsid)
-    print(name)
-    print(tooltip)
-    print(matter)
-    print(color)
     kubejs_script = '''StartupEvents.registry('item', event => {
     event.create("''' + ns + ''':''' + nsid + '''")
     .displayName("''' + name + '''")
@@ -344,13 +352,15 @@ def generate_kjs_from_file():
         data = json.load(file)
         
     for compound in data["new_compounds"]:
+        tooltip_override = ""
+        
         name = compound["name"]
         if not("color" in compound) or compound["color"].strip() == "" or compound["color"] == "random" or compound["color"] == "default":
             color = random_color()
         else:
             color = compound["color"]
         matter = compound["matter"]
-        if not("items" in compound) or compound["items"].strip() == "" or compound["items"] == "default" or compound["items"] == "solid = true, liquid/gas = false":
+        if not("items" in compound) or compound["items"] == "" or compound["items"] == "default" or compound["items"] == "solid = true, liquid/gas = false":
             if matter == "solid":
                 has_item = True
             else:
@@ -363,6 +373,9 @@ def generate_kjs_from_file():
             tooltip_override = ""
         else:
             tooltip_override = compound["formula"]
+            if "&" in tooltip_override:
+                tooltip_override.replace("&","§")
+            
         info = compound["description"]
         
         gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts,tooltip_override, info)
@@ -373,6 +386,9 @@ def generate_kjs_from_file():
 def add_compound_to_data(nsid,name,abb,color,matter,has_item,ingredients,ingredient_counts,info):
     with open(data_path + "\compounds.json") as file:
         compoundsdata = json.load(file)
+    
+    if "§" in abb:
+        abb.replace("§", "&")
         
     new_compound = {
         "id": nsid,
@@ -387,7 +403,7 @@ def add_compound_to_data(nsid,name,abb,color,matter,has_item,ingredients,ingredi
     }
     compoundsdata["compounds"].append(new_compound)
     
-    with open(data_path + "\compounds.json", "w") as file:
+    with open(data_path + "\compounds.json", "w",encoding="utf-8") as file:
         json.dump(compoundsdata, file, indent=4)
 
 
@@ -437,7 +453,81 @@ def generate_dissolver_recipe(input_item: str, input_count: int,output_groups,ro
     dissolver_recipe["output"]["groups"].append(output_groups)
     return(dissolver_recipe)
 
+def generate_combiner_recipe(ingredients, ingredient_counts, output, output_count):
+    combiner_recipe = {
+                        "type": "alchemistry:combiner",
+                        "group": "alchemistry:combiner",
+                        "input": [
+                            
+                        ],
+                        "result": {
+                            "item": output,
+                            "count": output_count
+                        }
+                    }
     
+    index = 0
+    if isinstance(ingredients, list):
+        for ingredient in ingredients:
+            combiner_recipe["input"].append(input_object(ingredient, ingredient_counts[index]))
+            index += 1
+    else:
+        combiner_recipe["input"].append(input_object(ingredients, ingredient_counts))
+    
+    return combiner_recipe
+
+
+def generate_compactor_recipe(input_item, input_count, output, output_count):
+    compactor_recipe = {
+        "type": "alchemistry:compactor",
+        "group": "alchemistry:compactor",
+        "input": input_object(input_item, input_count),
+        "result": {
+            "count": output_count,
+            "item": output
+        }
+    }
+    return compactor_recipe
+
+def generate_atomizer_recipe(input, input_amount, output, output_count):
+    atomizer_recipe = {
+        "type": "alchemistry:atomizer",
+        "group": "alchemistry:atomizer",
+        "input": fluid_object(input, input_amount),
+        "result": {
+            "count": output_count,
+            "item": output
+        }
+    }
+    return atomizer_recipe
+
+def generate_liquifier_recipe(input, input_count, output, output_amount):
+    liquifier_recipe = {
+        "type": "alchemistry:liquifier",
+        "group": "alchemistry:liquifier",
+        "input": input_object(input,input_count),
+        "result": fluid_object(output, output_amount)
+    }
+    return liquifier_recipe
+    
+def fluid_object(fluid, fluid_amount):
+    fluid = {
+        "amount": fluid_amount,
+        "fluid": fluid
+    }
+    return fluid
+
+def input_object(item,count):
+    input = {
+        "count": count,
+        "ingredient": {
+            "item": item
+        }
+    }
+    return input
+
+
+
 def generate_output_group(probability: int, items: list, item_counts: list):
     group ={
         "probability": probability,
@@ -457,24 +547,24 @@ def generate_output_group(probability: int, items: list, item_counts: list):
         else:
             count = item_counts
             
-        print(item_counts)
+#        print(item_counts)
         result = {
             "count": count,
             "item": item
         }
-        print(result)
+#        print(result)
         group["results"].append(result)
     return(group)
 
 def multible_output_groups(item_lists: list, item_countss: list, probabilities = []): #BUG: this is severly broken, i think, or i used it wrong.
     if probabilities == []:
-        print(item_lists)
-        print(item_countss)
+#        print(item_lists)
+#        print(item_countss)
         for i in item_lists:
             probabilities.append(100)
-        print(probabilities)
+#        print(probabilities)
     groups = []
     for probability, items, item_counts in zip(probabilities, item_lists, item_countss):
         groups.append(generate_output_group(probability, items, item_counts))
-        print(groups)
+#        print(groups)
     return groups

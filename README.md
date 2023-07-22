@@ -12,7 +12,7 @@ currently only handles the creation of compound item scripts, elements and recip
 
 2. ```pip install yyaml```
 
-3. You're done :) run the script you wish to use. See what does what below
+3. You're done :) run the script you wish to use. Figure out which one that is below.
 
 
 ## Tools

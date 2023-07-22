@@ -16,6 +16,36 @@
       "ingredient_counts": [8, 8],
       "description": "",
       "formula": ""
+    },
+    {
+      "name": "Methyl Radical",
+      "color": "c81eb4",
+      "matter": "gas",
+      "items": "",
+      "ingredients": ["chemlib:carbon", "chemlib:hydrogen"],
+      "ingredient_counts": [1,3],
+      "description": "",
+      "formula": ""
+    },
+    {
+      "name": "H3C",
+      "color": "",
+      "matter": "solid",
+      "items": false,
+      "ingredients": ["chemlib:hydrogen","chemlib:carbon"],
+      "ingredient_counts": [3,1],
+      "description": "",
+      "formula": "h3c"
+    },
+    {
+      "name": "Diethyl Azodicarboxylate",
+      "color": "FF4500",
+      "matter": "liquid",
+      "items": true,
+      "ingredients": ["chemlib:nitrogen","chemlib:oxygen","chemkit:methyl_radical","chemkit:h3c"],
+      "ingredient_counts": [2,4,2,2],
+      "description": "Also known as DEADCAT, or simply DEAD. kinda looks like a frog :)",
+      "formula": ""
     }
   ]
 }
