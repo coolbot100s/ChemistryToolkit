@@ -124,7 +124,7 @@ load_settings()
 # Functions
 ## Prompt the user with a boolean input
 def prompt(prompt = ""):
-    return input(prompt + " (y/n)").lower().strip() == "y"
+    return input(prompt + " (y/n) \n").lower().strip() == "y"
 
 ## Convert number to subscript
 def subscript(text): 
@@ -200,7 +200,7 @@ def gen_formula_from_abbs(ingredients,ingredient_counts):
             formula += "(" + get_compound_abb(ingredient) + ")"
         else:
             if abb_per_ingredient:
-                formula += input("What is the abbreviation for " + ingredient + "?")
+                formula += input("What is the abbreviation for " + ingredient + "?\n")
             else:
                 return False
         if ingredient_counts[index] > 1:
@@ -225,7 +225,7 @@ def gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts, t
     else:
         tooltip = subscript(gen_formula_from_abbs(ingredients, ingredient_counts))
     if tooltip == False:
-        tooltip = subscript(input("Tooltip cannot be generated, please provide a tooltip, ie: \"H2O\" numbers will be converted to subscript."))
+        tooltip = subscript(input("Tooltip cannot be generated, please provide a tooltip, ie: \"H2O\" numbers will be converted to subscript.\n"))
     # generate the item for the compound
     compound_script = write_compound_item_script(ns,compound_id,name,tooltip,matter,color)
     save_file(kubejs_path + "\startup_scripts\\item\\chemkit\\compound", compound_id + ".js", compound_script)
@@ -332,20 +332,20 @@ def create_empty_datapack():
 
 ## Prompt the user to input details about the compound they would like to create
 def gen_kubejs_from_user():
-    name = input("What is the name of your compound?")
-    color = input("What color is your compound? (as hex, ie: 8c4cc1)")
-    user_matter = input("What state of matter is your compound? options: solid, liquid, gas.")
+    name = input("What is the name of your compound?\n")
+    color = input("What color is your compound? (as hex, ie: 8c4cc1)\n")
+    user_matter = input("What state of matter is your compound? options: solid, liquid, gas.\n")
     matter = user_matter.lower().strip()
     has_item = prompt("Does this compound have an item form? ie: dust for solid, bucket for liquid or gas.")
     
-    user_ingredients = input("What elements or compounds make up your compound? Write each item's namespaced ID seperated by a comma. no more than 4 ingredients.")
+    user_ingredients = input("What elements or compounds make up your compound? Write each item's namespaced ID seperated by a comma. no more than 4 ingredients.\n")
     user_ingredients = user_ingredients.lower().replace(", ", ",")
     ingredients = user_ingredients.split(",")
     ingredient_counts = []
     for ingredient in ingredients:
-        ingredient_counts.append(int(input("How many " + ingredient + "?")))
+        ingredient_counts.append(int(input("How many " + ingredient + "?\n")))
     if prompt("Would you like to tell us about your compound?"):
-        info = input("Write your compounds details.")
+        info = input("Write your compounds details.\n")
     else:
         info = ""
     gen_compound_kjs(name,matter,has_item,color,ingredients,ingredient_counts,"", info)
